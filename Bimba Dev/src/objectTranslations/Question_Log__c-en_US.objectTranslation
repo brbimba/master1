@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Question Log</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Question Log</value>
+    </caseValues>
+    <fields>
+        <label><!-- Actual Close Date --></label>
+        <name>Actual_Close_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Answer --></label>
+        <name>Answer__c</name>
+    </fields>
+    <fields>
+        <label><!-- Assigned To --></label>
+        <name>Assigned_To__c</name>
+        <relationshipLabel><!-- Question Log (Assigned To) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Capability --></label>
+        <name>Capability__c</name>
+    </fields>
+    <fields>
+        <label><!-- Date Reported --></label>
+        <name>Date_Reported__c</name>
+    </fields>
+    <fields>
+        <label><!-- Date Resolved --></label>
+        <name>Date_Resolved__c</name>
+    </fields>
+    <fields>
+        <label><!-- Description --></label>
+        <name>Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Expected Close Date --></label>
+        <name>Expected_Close_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Priority --></label>
+        <name>Priority__c</name>
+        <picklistValues>
+            <masterLabel>High</masterLabel>
+            <translation><!-- High --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Low</masterLabel>
+            <translation><!-- Low --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Medium</masterLabel>
+            <translation><!-- Medium --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Question --></label>
+        <name>Question__c</name>
+    </fields>
+    <fields>
+        <label><!-- Request --></label>
+        <name>Request__c</name>
+        <relationshipLabel><!-- Question Log --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Requested Date --></label>
+        <name>Requested_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Resolution/Comments --></label>
+        <name>Resolution_Comments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status Indicator --></label>
+        <name>Status_Indicator__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>Status__c</name>
+        <picklistValues>
+            <masterLabel>Clarification Provided</masterLabel>
+            <translation><!-- Clarification Provided --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Clarification Requested</masterLabel>
+            <translation><!-- Clarification Requested --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Closed</masterLabel>
+            <translation><!-- Closed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New</masterLabel>
+            <translation><!-- New --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Submitter --></label>
+        <name>Submitter__c</name>
+        <relationshipLabel><!-- Question Log (Submitter) --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Track --></label>
+        <name>Track__c</name>
+        <picklistValues>
+            <masterLabel>Track 1</masterLabel>
+            <translation><!-- Track 1 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Track 2</masterLabel>
+            <translation><!-- Track 2 --></translation>
+        </picklistValues>
+    </fields>
+    <layouts>
+        <layout>Question Log Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Question / Answer --></label>
+            <section>Question / Answer</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

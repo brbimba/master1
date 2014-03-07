@@ -1,0 +1,10 @@
+<apex:page sidebar="false" standardController="Account" >
+    <apex:pageBlock title="My Account Contacts" >
+        <apex:pageBlockSection >
+        <apex:pageblockTable value="{! Account.Contacts}" var="Contact_item">
+            <apex:column value="{! Contact_item.Name}"/>
+        </apex:pageblockTable>
+        </apex:pageBlockSection>    
+    </apex:pageBlock>
+  
+</apex:page>

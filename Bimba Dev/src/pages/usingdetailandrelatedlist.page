@@ -1,0 +1,6 @@
+<apex:page standardController="Account" sidebar="false">
+    <apex:detail relatedList="false" showChatter="true"/>
+    <apex:relatedList list="Contacts"/> 
+        
+    
+</apex:page>

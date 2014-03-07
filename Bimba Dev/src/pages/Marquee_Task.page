@@ -1,0 +1,30 @@
+<apex:page standardController="task" renderAs="pdf" standardstylesheets="true">
+ <html>
+ 
+<head>
+ <style type="text/css">
+ input {
+ visibility: hidden; 
+} 
+
+</style>
+<apex:form >
+<marquee> <h1>
+This is my first VisualForce Page! </h1>
+</marquee>
+<h1> This text is displayed without INLINE styles </h1>   
+</apex:form>
+
+ <!--link class="user" href="/sCSS/25.0/sprites/1344358478000/Theme3/default/gc/zen-componentsCompatible.css" rel="stylesheet" type="text/css"/-->
+ <!--link class="user" href="/sCSS/25.0/sprites/1344358478000/Theme3/default/gc/elements.css" rel="stylesheet" type="text/css"/-->
+ <link class="user" href="/sCSS/25.0/sprites/1344358478000/Theme3/default/gc/common.css" rel="stylesheet" type="text/css"/>
+ <!--link class="user" href="/sCSS/25.0/sprites/1343420890000/Theme3/gc/dStandard.css" rel="stylesheet" type="text/css"/-->
+ <!--link class="user" href="/sCSS/25.0/sprites/1345062068000/Theme3/{!$Organization.ID}/{!$User.Id}/gc/dCustom0.css" rel="stylesheet" type="text/css"/-->
+ <link class="user" href="/sCSS/25.0/sprites/1344358478000/Theme3/default/gc/extended.css" rel="stylesheet" type="text/css"/>
+ <!--link class="user" href="/sCSS/25.0/sprites/1344358478000/Theme3/default/gc/setup.css" rel="stylesheet" type="text/css"/--> 
+</head>
+ 
+
+</html>
+ <apex:detail relatedList="true"/>
+ </apex:page>

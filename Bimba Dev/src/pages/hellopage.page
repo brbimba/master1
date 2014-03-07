@@ -1,0 +1,58 @@
+<apex:page >
+    <h1>Congratulations</h1>
+    This is your new Page: hellopage
+    <apex:pageBlock title="A Block Title 1">
+        <apex:pageBlockSection title="A Section Title">
+        I'm three components deep!
+            <apex:pageBlockSectionItem ></apex:pageBlockSectionItem>
+        </apex:pageBlockSection>
+        <apex:pageBlockSection title="A New Section">
+        "This is another section!"
+        </apex:pageBlockSection>
+        <apex:pageBlock title="Block Title 2">
+        <apex:tabPanel title="A TabPanel Title">
+            <apex:tab label="Tab Label 1" Name="Tab Name1">
+                Content for Tab 1
+            </apex:tab>
+            <apex:tab label="Tab Label 2" Name="Tab Name2">
+                Content for Tab 2
+            </apex:tab>   
+        </apex:tabPanel>
+        </apex:pageBlock>
+        <apex:pageBlock title="Block Title 3">
+        <!-- A simple example of a toolbar Start-->
+            
+            <apex:toolbar >
+                <apex:outputText value="Toolbar Name 1"/>
+                <apex:toolbarGroup itemSeparator="line" id="toolbarGroupLinks">
+                    <apex:outputLink value="http://www.salesforce.com">
+                salesforce
+                </apex:outputLink>
+                <apex:outputLink value="http://developer.salesforce.com">
+                apex developer network
+                </apex:outputLink>
+                </apex:toolbarGroup>
+                <apex:toolbarGroup itemSeparator="line" location="right">
+                <apex:form id="theForm">
+                <apex:inputText id="theInputText">Enter Text</apex:inputText>
+                <apex:commandLink value="search" id="theCommandLink"/>
+                </apex:form>
+                </apex:toolbarGroup>
+                </apex:toolbar>
+                <apex:toolbar >
+                <apex:outputText value="Toolbar Name 2"/>
+                <apex:toolbarGroup itemSeparator="line" >
+                <apex:outputLink value="https://www.google.com">
+                Google Search Page
+                </apex:outputLink>
+                <apex:outputLink value="http://www.portal.accenture.com">
+                Search @ Accenture
+                </apex:outputLink>
+                </apex:toolbarGroup>
+                </apex:toolbar>
+        <!-- A simple example of a toolbar End-->
+        Current Year is {! Year(TODAY())}!
+        </apex:pageBlock>
+    </apex:pageBlock>
+  
+</apex:page>

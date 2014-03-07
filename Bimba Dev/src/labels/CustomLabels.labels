@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomLabels xmlns="http://soap.sforce.com/2006/04/metadata">
+    <labels>
+        <fullName>PMO_Defect_Open</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>PMO_Defect_Open</shortDescription>
+        <value>Open</value>
+    </labels>
+    <labels>
+        <fullName>PMO_Defect_Subject</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>PMO_Defect_Subject</shortDescription>
+        <value>Defect Found on Requirement #</value>
+    </labels>
+    <labels>
+        <fullName>PMO_TaskType_Customization</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>PMO_TaskType_Customization</shortDescription>
+        <value>Customization</value>
+    </labels>
+    <labels>
+        <fullName>PMO_Task_CodeReview</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>PMO_Task_CodeReview</shortDescription>
+        <value>Code Review</value>
+    </labels>
+    <labels>
+        <fullName>PMO_Task_Error</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>PMO_Task_Error</shortDescription>
+        <value>Some error occured while creating a new Task</value>
+    </labels>
+    <labels>
+        <fullName>PMO_Task_Execution</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>PMO_Task_Execution</shortDescription>
+        <value>Execution</value>
+    </labels>
+    <labels>
+        <fullName>PMO_Task_Review</fullName>
+        <language>en_US</language>
+        <protected>true</protected>
+        <shortDescription>PMO_Task_Review</shortDescription>
+        <value>Review</value>
+    </labels>
+</CustomLabels>

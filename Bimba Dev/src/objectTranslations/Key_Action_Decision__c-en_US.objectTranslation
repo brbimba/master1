@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Key Action/Decision</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Key Actions/Decisions</value>
+    </caseValues>
+    <fields>
+        <label><!-- Completed Date --></label>
+        <name>Completed_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Days Open --></label>
+        <name>Days_Open__c</name>
+    </fields>
+    <fields>
+        <help><!-- Enter details of the outcome of the action item (what was determined) or the decision reached (what was agreed to, which option was selected). This field is required when Status is Completed. --></help>
+        <label><!-- Decision/Outcome --></label>
+        <name>Decision_Outcome__c</name>
+    </fields>
+    <fields>
+        <help><!-- Enter a detailed desription of the Action to be completed or the Decision needed. --></help>
+        <label><!-- Description --></label>
+        <name>Description__c</name>
+    </fields>
+    <fields>
+        <help><!-- Enter the date when the Action Item must be completed or the Decision must be made. Items not completed by the Due Date pose a risk to deliverables. --></help>
+        <label><!-- Due Date --></label>
+        <name>Due_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Key Action/Decision # --></label>
+        <name>Key_Action_Decision__c</name>
+    </fields>
+    <fields>
+        <help><!-- Enter the options under evaluation. --></help>
+        <label><!-- Options --></label>
+        <name>Options__c</name>
+    </fields>
+    <fields>
+        <help><!-- Normal Priority items should be closed within 5 business days. High Priority items should be closed within 2 business days. --></help>
+        <label><!-- Priority --></label>
+        <name>Priority__c</name>
+        <picklistValues>
+            <masterLabel>High</masterLabel>
+            <translation><!-- High --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Normal</masterLabel>
+            <translation><!-- Normal --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Indicate which Capability this Key Action/Key is related to, if any. --></help>
+        <label><!-- Related Capability --></label>
+        <name>Related_Capability__c</name>
+        <relationshipLabel><!-- Key Actions/Decisions --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- If this Key Action/Decision is directly related to a single Issue or Risk, select that Issue or Risk here. --></help>
+        <label><!-- Related Issue/Risk --></label>
+        <name>Related_Issue_Risk__c</name>
+        <relationshipLabel><!-- Key Actions/Decisions --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- If this Key Action/Decision was created as a result of another Action Item or Decision, select the related item here. --></help>
+        <label><!-- Related Key Action/Decision --></label>
+        <name>Related_Key_Action_Decision__c</name>
+        <relationshipLabel><!-- Key Actions/Decisions --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- Select the Release that this Key Action/Decision is related to. --></help>
+        <label><!-- Related Release --></label>
+        <name>Related_Release__c</name>
+        <relationshipLabel><!-- Key Actions/Decisions --></relationshipLabel>
+    </fields>
+    <fields>
+        <help><!-- If this Key Action/Decision is directly related to a single Request, select that Request here. --></help>
+        <label><!-- Related Request --></label>
+        <name>Related_Request__c</name>
+        <relationshipLabel><!-- Key Actions/Decisions --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>Status__c</name>
+        <picklistValues>
+            <masterLabel>Completed</masterLabel>
+            <translation><!-- Completed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>In Progress</masterLabel>
+            <translation><!-- In Progress --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not Started</masterLabel>
+            <translation><!-- Not Started --></translation>
+        </picklistValues>
+    </fields>
+    <layouts>
+        <layout>Action Item Layout</layout>
+        <sections>
+            <label><!-- Action Item Details --></label>
+            <section>Action Item Details</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Related Information --></label>
+            <section>Related Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Key Decision Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Decision Details --></label>
+            <section>Decision Details</section>
+        </sections>
+        <sections>
+            <label><!-- Related Information --></label>
+            <section>Related Information</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label><!-- Action Item --></label>
+        <name>Action_Item</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Key Decision --></label>
+        <name>Key_Decision</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- Decision/Outcome is required when Status is Completed. --></errorMessage>
+        <name>Decision_Outcome_Required_when_Completed</name>
+    </validationRules>
+</CustomObjectTranslation>

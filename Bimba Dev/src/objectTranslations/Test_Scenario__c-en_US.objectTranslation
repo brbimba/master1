@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Test Scenario</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Test Scenarios</value>
+    </caseValues>
+    <fields>
+        <label><!-- Comments --></label>
+        <name>Comments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Description --></label>
+        <name>Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Functional Area --></label>
+        <name>Functional_Area__c</name>
+    </fields>
+    <fields>
+        <label><!-- Release --></label>
+        <name>Release__c</name>
+        <relationshipLabel><!-- Test Scenarios --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>Status__c</name>
+        <picklistValues>
+            <masterLabel>Additional Clarification Requested</masterLabel>
+            <translation><!-- Additional Clarification Requested --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Clarification Provided</masterLabel>
+            <translation><!-- Clarification Provided --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Release: Build</masterLabel>
+            <translation><!-- Release: Build --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- # of Test Scripts --></label>
+        <name>of_Test_Scripts__c</name>
+    </fields>
+    <layouts>
+        <layout>Test Scenario Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

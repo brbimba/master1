@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Milestone</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Milestones</value>
+    </caseValues>
+    <fields>
+        <label><!-- Actual End Date --></label>
+        <name>Actual_End_Date__c</name>
+    </fields>
+    <fields>
+        <help><!-- Milestone for an Asset or a Initiative. --></help>
+        <label><!-- Asset/Initiative Milestone --></label>
+        <name>Asset_Initiative_Milestone__c</name>
+        <picklistValues>
+            <masterLabel>Build/Develop Final Content</masterLabel>
+            <translation><!-- Build/Develop Final Content --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Deploy/Publish</masterLabel>
+            <translation><!-- Deploy/Publish --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Design/Draft</masterLabel>
+            <translation><!-- Design/Draft --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Gain Stakeholder Buy-in</masterLabel>
+            <translation><!-- Gain Stakeholder Buy-in --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Gather Requirements/ Define Scope</masterLabel>
+            <translation><!-- Gather Requirements/ Define Scope --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Optimize/Maintain</masterLabel>
+            <translation><!-- Optimize/Maintain --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Test/Validate</masterLabel>
+            <translation><!-- Test/Validate --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Use this comment box to indicate the variance between milestone dates. (e.g. Holidays) --></help>
+        <label><!-- Comments --></label>
+        <name>Comments__c</name>
+    </fields>
+    <fields>
+        <help><!-- Milestone Id to distinguish a milestone for an Asset/Initiative. --></help>
+        <label><!-- Milestone Id --></label>
+        <name>Milestone_Id__c</name>
+    </fields>
+    <fields>
+        <help><!-- Name/Label for this milestone. --></help>
+        <label><!-- Milestone Name --></label>
+        <name>Milestone_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Milestone --></label>
+        <name>Milestones__c</name>
+        <picklistValues>
+            <masterLabel>Deploy &amp; Train</masterLabel>
+            <translation><!-- Deploy &amp; Train --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Design</masterLabel>
+            <translation><!-- Design --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Development &amp; Unit Test</masterLabel>
+            <translation><!-- Development &amp; Unit Test --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Final Scope Lock (Design Sign-off)</masterLabel>
+            <translation><!-- Final Scope Lock (Design Sign-off) --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Level of Effort Estimates</masterLabel>
+            <translation><!-- Level of Effort Estimates --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Optimize/Maintain</masterLabel>
+            <translation><!-- Optimize/Maintain --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Preliminary Release Scope</masterLabel>
+            <translation><!-- Preliminary Release Scope --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Preliminary Scope Lock</masterLabel>
+            <translation><!-- Preliminary Scope Lock --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Requirements Definition</masterLabel>
+            <translation><!-- Requirements Definition --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>SIT</masterLabel>
+            <translation><!-- SIT --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UAT</masterLabel>
+            <translation><!-- UAT --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- On Target --></label>
+        <name>On_Target__c</name>
+    </fields>
+    <fields>
+        <help><!-- Owner of this Milestone --></help>
+        <label><!-- Owner --></label>
+        <name>Owner__c</name>
+        <relationshipLabel><!-- Milestones --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- % Complete --></label>
+        <name>Percent_Complete__c</name>
+    </fields>
+    <fields>
+        <label><!-- Planned End Date --></label>
+        <name>Planned_End_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Progress --></label>
+        <name>Progress__c</name>
+        <picklistValues>
+            <masterLabel>Complete</masterLabel>
+            <translation><!-- Complete --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>In Progress</masterLabel>
+            <translation><!-- In Progress --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not Started</masterLabel>
+            <translation><!-- Not Started --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Release related to this milestone. --></help>
+        <label><!-- Release --></label>
+        <name>Release__c</name>
+        <relationshipLabel><!-- Milestones --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Start Date --></label>
+        <name>Start_Date__c</name>
+    </fields>
+    <fields>
+        <help><!-- Green: Milestone completion on target
+Yellow: Milestone completion at risk
+Red: Milestone completion planned to be missed or missed --></help>
+        <label><!-- Status --></label>
+        <name>Status__c</name>
+        <picklistValues>
+            <masterLabel>Green</masterLabel>
+            <translation><!-- Green --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Red</masterLabel>
+            <translation><!-- Red --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yellow</masterLabel>
+            <translation><!-- Yellow --></translation>
+        </picklistValues>
+    </fields>
+    <layouts>
+        <layout>Milestone for Asset/Initiative Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Milestone --></label>
+            <section>Milestone</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Milestone for Releases Layout</layout>
+        <sections>
+            <label><!-- Additional Information --></label>
+            <section>Additional Information</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Milestone --></label>
+            <section>Milestone</section>
+        </sections>
+        <sections>
+            <label><!-- System Information --></label>
+            <section>System Information</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label><!-- Milestone for Asset/Initiative --></label>
+        <name>Milestone_Asset_Initiative</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Milestone for Release --></label>
+        <name>Milestone_Release</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- Please select an appropriate status for this milestone. --></errorMessage>
+        <name>Progress_Required</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Actual End Date can&apos;t be greater than today&apos;s date. --></errorMessage>
+        <name>Release_Actual_End_Date</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Select an appropriate Milestone. --></errorMessage>
+        <name>SetMilestone</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Planned/Actual End Date must be greater than the Start Date. --></errorMessage>
+        <name>planned_end_date</name>
+    </validationRules>
+</CustomObjectTranslation>

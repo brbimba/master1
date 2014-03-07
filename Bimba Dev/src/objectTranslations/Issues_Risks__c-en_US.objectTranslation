@@ -1,0 +1,343 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Issue/Risk</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Issues/Risks</value>
+    </caseValues>
+    <fields>
+        <label><!-- Actual Resolution Date --></label>
+        <name>Actual_Resolution_Date__c</name>
+    </fields>
+    <fields>
+        <help><!-- Select one or more categories that the issue/risk is most closely associated to --></help>
+        <label><!-- Category --></label>
+        <name>Category__c</name>
+        <picklistValues>
+            <masterLabel>Budget</masterLabel>
+            <translation><!-- Budget --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Resources</masterLabel>
+            <translation><!-- Resources --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Scope</masterLabel>
+            <translation><!-- Scope --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Solution</masterLabel>
+            <translation><!-- Solution --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Timeline</masterLabel>
+            <translation><!-- Timeline --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Days Open --></label>
+        <name>Days_Open__c</name>
+    </fields>
+    <fields>
+        <help><!-- Detailed description of the issue/risk. --></help>
+        <label><!-- Description --></label>
+        <name>Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Impact Description --></label>
+        <name>Impact_Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Issue / Risk --></label>
+        <name>Issue__c</name>
+        <picklistValues>
+            <masterLabel>Issue</masterLabel>
+            <translation><!-- Issue --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Risk</masterLabel>
+            <translation><!-- Risk --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- 10% - Highly unlikely to occur
+25% - Somewhat likely to occur
+50% - Strong chance to occur
+75% - Likely to occur
+90% - Most likely to occur --></help>
+        <label><!-- Likelihood --></label>
+        <name>Likelihood__c</name>
+        <picklistValues>
+            <masterLabel>10%</masterLabel>
+            <translation><!-- 10% --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>25%</masterLabel>
+            <translation><!-- 25% --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>50%</masterLabel>
+            <translation><!-- 50% --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>75%</masterLabel>
+            <translation><!-- 75% --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>90%</masterLabel>
+            <translation><!-- 90% --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Likely impact of an impending risk. --></help>
+        <label><!-- Likely Impact --></label>
+        <name>Likely_Impact__c</name>
+    </fields>
+    <fields>
+        <label><!-- Logged Date --></label>
+        <name>Logged_Date__c</name>
+    </fields>
+    <fields>
+        <help><!-- Milestone related to this Issue/Risk. --></help>
+        <label><!-- Milestone --></label>
+        <name>Milestone__c</name>
+        <relationshipLabel><!-- Issues/Risks --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Other Description --></label>
+        <name>Other_Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Owner --></label>
+        <name>Owner__c</name>
+        <relationshipLabel><!-- Issues/Risks --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Past Due? --></label>
+        <name>Past_Due__c</name>
+    </fields>
+    <fields>
+        <label><!-- Priority --></label>
+        <name>Priority__c</name>
+        <picklistValues>
+            <masterLabel>High</masterLabel>
+            <translation><!-- High --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Low</masterLabel>
+            <translation><!-- Low --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Medium</masterLabel>
+            <translation><!-- Medium --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- These values will be customizable based on your project needs. --></help>
+        <label><!-- Related Workstream --></label>
+        <name>Related_Workstream__c</name>
+        <picklistValues>
+            <masterLabel>Account Management</masterLabel>
+            <translation><!-- Account Management --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Contact Management</masterLabel>
+            <translation><!-- Contact Management --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Data Integration</masterLabel>
+            <translation><!-- Data Integration --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Data Migration</masterLabel>
+            <translation><!-- Data Migration --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Deployment</masterLabel>
+            <translation><!-- Deployment --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Lead Management</masterLabel>
+            <translation><!-- Lead Management --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Opportunity Management</masterLabel>
+            <translation><!-- Opportunity Management --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Overall Project</masterLabel>
+            <translation><!-- Overall Project --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Project Management</masterLabel>
+            <translation><!-- Project Management --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Training</masterLabel>
+            <translation><!-- Training --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Issues and Risks for this release. --></help>
+        <label><!-- Release --></label>
+        <name>Release__c</name>
+        <relationshipLabel><!-- Issues/Risks --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Request --></label>
+        <name>Request__c</name>
+        <relationshipLabel><!-- Issues/Risks --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Resolution / Mitigating Actions --></label>
+        <name>Resolution_Mitigating_Actions__c</name>
+    </fields>
+    <fields>
+        <label><!-- Resolution --></label>
+        <name>Resolution__c</name>
+    </fields>
+    <fields>
+        <help><!-- Document the mitigation plan for this risk. --></help>
+        <label><!-- Risk Mitigation Plan --></label>
+        <name>Risk_Mitigation_Plan__c</name>
+    </fields>
+    <fields>
+        <label><!-- Risk / Issue Level --></label>
+        <name>Risk__c</name>
+        <picklistValues>
+            <masterLabel>Executive Steering Committee</masterLabel>
+            <translation><!-- Executive Steering Committee --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Leadership Team</masterLabel>
+            <translation><!-- Leadership Team --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Project Team</masterLabel>
+            <translation><!-- Project Team --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Severity of the impact the Issue or Risk will have on the project if not resolved. Consider immediate and downstream impacts. --></help>
+        <label><!-- Severity Level --></label>
+        <name>Severity_Level__c</name>
+        <picklistValues>
+            <masterLabel>1 - Very Low</masterLabel>
+            <translation><!-- 1 - Very Low --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>2 - Low</masterLabel>
+            <translation><!-- 2 - Low --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>3 - Moderate</masterLabel>
+            <translation><!-- 3 - Moderate --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>4 - High</masterLabel>
+            <translation><!-- 4 - High --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>5 - Critical</masterLabel>
+            <translation><!-- 5 - Critical --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>Status__c</name>
+        <picklistValues>
+            <masterLabel>Closed</masterLabel>
+            <translation><!-- Closed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Open</masterLabel>
+            <translation><!-- Open --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Target Resolution Date --></label>
+        <name>Target_Resolution_Date__c</name>
+    </fields>
+    <layouts>
+        <layout>Issues Tab Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Description --></label>
+            <section>Description</section>
+        </sections>
+        <sections>
+            <label><!-- Issue --></label>
+            <section>Issue</section>
+        </sections>
+        <sections>
+            <label><!-- Project Imacts --></label>
+            <section>Project Imacts</section>
+        </sections>
+        <sections>
+            <label><!-- Resolution --></label>
+            <section>Resolution</section>
+        </sections>
+        <sections>
+            <label><!-- System Information --></label>
+            <section>System Information</section>
+        </sections>
+    </layouts>
+    <layouts>
+        <layout>Risks Tab Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Description --></label>
+            <section>Description</section>
+        </sections>
+        <sections>
+            <label><!-- Project Impacts --></label>
+            <section>Project Impacts</section>
+        </sections>
+        <sections>
+            <label><!-- Resolution --></label>
+            <section>Resolution</section>
+        </sections>
+        <sections>
+            <label><!-- Risk --></label>
+            <section>Risk</section>
+        </sections>
+        <sections>
+            <label><!-- System Information --></label>
+            <section>System Information</section>
+        </sections>
+    </layouts>
+    <recordTypes>
+        <label><!-- Issue --></label>
+        <name>Issue</name>
+    </recordTypes>
+    <recordTypes>
+        <label><!-- Risk --></label>
+        <name>Risk</name>
+    </recordTypes>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- Actual resolution date should not be greater than today&apos;s date --></errorMessage>
+        <name>Act_Resloution_Date</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Resolution Date should be greater than issue/risk logged date. --></errorMessage>
+        <name>IR_Res_Date_Val</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- You must enter a description in this field if &apos;Other&apos; is one of your selections for the category. --></errorMessage>
+        <name>MustDescribeOther</name>
+    </validationRules>
+</CustomObjectTranslation>

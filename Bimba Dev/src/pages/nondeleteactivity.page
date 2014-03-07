@@ -1,0 +1,12 @@
+<apex:page action="{if (IsClosed,
+URLFOR($Action.Task.Delete, $CurrentPage.Parameters.id,[retURL='/007'],true)),null}">
+
+    <apex:pageBlock >
+        <apex:PageMessage summary="You are not allowed to Delete Tasks and Call Logs"
+            severity="Warning"
+            strength="3"/>
+        <apex:pageMessages />
+
+    </apex:pageBlock>
+ 
+</apex:page>

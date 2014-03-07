@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Sign Off</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Sign Off</value>
+    </caseValues>
+    <fields>
+        <label><!-- Agreement Statement --></label>
+        <name>Agreement_Statement__c</name>
+    </fields>
+    <fields>
+        <label><!-- Agreement --></label>
+        <name>Agreement__c</name>
+    </fields>
+    <fields>
+        <label><!-- Assigned Approver --></label>
+        <name>Assigned_Approver__c</name>
+        <relationshipLabel><!-- Sign Off --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Capability --></label>
+        <name>Capability__c</name>
+        <relationshipLabel><!-- Sign Off --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Sign Off Date/Time --></label>
+        <name>Sign_Off_Date_Time__c</name>
+    </fields>
+    <fields>
+        <label><!-- Sign Off Stage --></label>
+        <name>Sign_Off_Stage__c</name>
+        <picklistValues>
+            <masterLabel>Adapt &amp; Ongoing Support</masterLabel>
+            <translation><!-- Adapt &amp; Ongoing Support --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Build</masterLabel>
+            <translation><!-- Build --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Deploy</masterLabel>
+            <translation><!-- Deploy --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Design</masterLabel>
+            <translation><!-- Design --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Plan</masterLabel>
+            <translation><!-- Plan --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Test</masterLabel>
+            <translation><!-- Test --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>UAT</masterLabel>
+            <translation><!-- UAT --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Sign Off Status --></label>
+        <name>Sign_Off_Status__c</name>
+        <picklistValues>
+            <masterLabel>Approved</masterLabel>
+            <translation><!-- Approved --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Pending</masterLabel>
+            <translation><!-- Pending --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Stakeholder --></label>
+        <name>Stakeholder__c</name>
+    </fields>
+    <layouts>
+        <layout>Sign Off Layout</layout>
+        <sections>
+            <label><!-- Agreement --></label>
+            <section>Agreement</section>
+        </sections>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- Please type the Agreement Statement exactly as it appears. --></errorMessage>
+        <name>Sign_Off_Validation</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Only the assigned approver can sign off. Please only fill out agreement if you are the capability owner and named as the assigned approver. --></errorMessage>
+        <name>Validating_Actual_and_Assigned_Approver</name>
+    </validationRules>
+</CustomObjectTranslation>

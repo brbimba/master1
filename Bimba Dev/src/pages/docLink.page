@@ -1,0 +1,6 @@
+<apex:page controller="HomeController">
+  
+  <apex:outputLink value="{!strDocUrl}" id="theLink" styleclass="slabutton">
+    <span class="delete">Your Doc</span>
+ </apex:outputLink>
+</apex:page>

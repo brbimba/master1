@@ -1,0 +1,585 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>TOOLKIT - An object that represents a significant event in the project&apos;s lifespan.</description>
+    <enableActivities>false</enableActivities>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>true</enableReports>
+    <fields>
+        <fullName>Actual_End_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Actual End Date</label>
+        <required>false</required>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Asset_Initiative_Milestone__c</fullName>
+        <description>Milestone for an Asset or a Initiative.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Milestone for an Asset or a Initiative.</inlineHelpText>
+        <label>Asset/Initiative Milestone</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Gain Stakeholder Buy-in</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Gather Requirements/ Define Scope</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Design/Draft</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Build/Develop Final Content</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Test/Validate</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Deploy/Publish</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Optimize/Maintain</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Comments__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Use this comment box to indicate the variance between milestone dates. (e.g. Holidays)</inlineHelpText>
+        <label>Comments</label>
+        <length>4000</length>
+        <type>LongTextArea</type>
+        <visibleLines>3</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Milestone_Id__c</fullName>
+        <description>Milestone Id to distinguish a milestone for an Asset/Initiative.</description>
+        <displayFormat>{000}</displayFormat>
+        <externalId>false</externalId>
+        <inlineHelpText>Milestone Id to distinguish a milestone for an Asset/Initiative.</inlineHelpText>
+        <label>Milestone Id</label>
+        <type>AutoNumber</type>
+    </fields>
+    <fields>
+        <fullName>Milestone_Name__c</fullName>
+        <description>Milestone Name</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Name/Label for this milestone.</inlineHelpText>
+        <label>Milestone Name</label>
+        <length>30</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Milestones__c</fullName>
+        <externalId>false</externalId>
+        <label>Milestone</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Preliminary Release Scope</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Requirements Definition</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Level of Effort Estimates</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Preliminary Scope Lock</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Design</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Final Scope Lock (Design Sign-off)</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Development &amp; Unit Test</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>SIT</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>UAT</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Deploy &amp; Train</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Optimize/Maintain</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>On_Target__c</fullName>
+        <description>Displays a status as red, green or yellow ball.</description>
+        <externalId>false</externalId>
+        <formula>if(
+( Start_Date__c  &lt;= TODAY()) &amp;&amp; (ISPICKVAL(Progress__c, &quot;Not Started&quot;)), IMAGE(&quot;/img/samples/light_red.gif&quot;, &quot;Red&quot;), if((Planned_End_Date__c &lt;= TODAY()) &amp;&amp; (ISPICKVAL(Progress__c, &quot;In Progress&quot;)), IMAGE(&quot;/img/samples/light_red.gif&quot;, &quot;Red&quot;), if((Planned_End_Date__c &lt;= TODAY()) &amp;&amp; (ISPICKVAL(Progress__c, &quot;Not Started&quot;)), IMAGE(&quot;/img/samples/light_red.gif&quot;, &quot;Red&quot;), 
+if((Planned_End_Date__c &lt;= TODAY()+5) &amp;&amp; (ISPICKVAL(Progress__c, &quot;In Progress&quot;)), IMAGE(&quot;/img/samples/light_yellow.gif&quot;, &quot;Yellow&quot;), 
+IMAGE(&quot;/img/samples/light_green.gif&quot;, &quot;Green&quot;)))))</formula>
+        <label>On Target</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Owner__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Owner of this Milestone</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Owner of this Milestone</inlineHelpText>
+        <label>Owner</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Milestones</relationshipLabel>
+        <relationshipName>Milestones</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Percent_Complete__c</fullName>
+        <externalId>false</externalId>
+        <label>% Complete</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>0</scale>
+        <type>Percent</type>
+    </fields>
+    <fields>
+        <fullName>Planned_End_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Planned End Date</label>
+        <required>true</required>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Progress__c</fullName>
+        <externalId>false</externalId>
+        <label>Progress</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Not Started</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>In Progress</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Complete</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Release__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Release related to this milestone.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Release related to this milestone.</inlineHelpText>
+        <label>Release</label>
+        <referenceTo>Release__c</referenceTo>
+        <relationshipLabel>Milestones</relationshipLabel>
+        <relationshipName>Milestones</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Start_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Start Date</label>
+        <required>true</required>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Status__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>Green: Milestone completion on target
+Yellow: Milestone completion at risk
+Red: Milestone completion planned to be missed or missed</inlineHelpText>
+        <label>Status</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Red</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Yellow</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Green</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <label>Milestone</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>NAME</columns>
+        <columns>Milestone_Name__c</columns>
+        <columns>Start_Date__c</columns>
+        <columns>Planned_End_Date__c</columns>
+        <columns>Percent_Complete__c</columns>
+        <columns>Progress__c</columns>
+        <columns>OWNER.LAST_NAME</columns>
+        <columns>Status__c</columns>
+        <columns>On_Target__c</columns>
+        <columns>Release__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <displayFormat>{000}</displayFormat>
+        <label>Milestone ID</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Milestones</pluralLabel>
+    <recordTypes>
+        <fullName>Milestone_Asset_Initiative</fullName>
+        <active>false</active>
+        <description>Milestones for Assets/Initiatives</description>
+        <label>Milestone for Asset/Initiative</label>
+        <picklistValues>
+            <picklist>Asset_Initiative_Milestone__c</picklist>
+            <values>
+                <fullName>Build%2FDevelop Final Content</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Deploy%2FPublish</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Design%2FDraft</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Gain Stakeholder Buy-in</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Gather Requirements%2F Define Scope</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Optimize%2FMaintain</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Test%2FValidate</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Milestones__c</picklist>
+            <values>
+                <fullName>Deploy %26 Train</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Design</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Development %26 Unit Test</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Final Scope Lock %28Design Sign-off%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Level of Effort Estimates</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Optimize%2FMaintain</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Preliminary Release Scope</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Preliminary Scope Lock</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Requirements Definition</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SIT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>UAT</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Progress__c</picklist>
+            <values>
+                <fullName>Complete</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In Progress</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Started</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status__c</picklist>
+            <values>
+                <fullName>Green</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Red</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yellow</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Milestone_Release</fullName>
+        <active>true</active>
+        <description>Milestones specific to Releases.</description>
+        <label>Milestone for Release</label>
+        <picklistValues>
+            <picklist>Asset_Initiative_Milestone__c</picklist>
+            <values>
+                <fullName>Build%2FDevelop Final Content</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Deploy%2FPublish</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Design%2FDraft</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Gain Stakeholder Buy-in</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Gather Requirements%2F Define Scope</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Optimize%2FMaintain</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Test%2FValidate</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Milestones__c</picklist>
+            <values>
+                <fullName>Deploy %26 Train</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Design</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Development %26 Unit Test</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Final Scope Lock %28Design Sign-off%29</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Level of Effort Estimates</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Optimize%2FMaintain</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Preliminary Release Scope</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Preliminary Scope Lock</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Requirements Definition</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>SIT</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>UAT</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Progress__c</picklist>
+            <values>
+                <fullName>Complete</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>In Progress</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Not Started</fullName>
+                <default>true</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status__c</picklist>
+            <values>
+                <fullName>Green</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Red</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Yellow</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts>
+        <customTabListAdditionalFields>Milestone_Name__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Start_Date__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Planned_End_Date__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Percent_Complete__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Progress__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>OWNER.LAST_NAME</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Status__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>On_Target__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Release__c</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>Milestone_Name__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Start_Date__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Planned_End_Date__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Percent_Complete__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Progress__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>OWNER.LAST_NAME</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Status__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>On_Target__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Release__c</lookupDialogsAdditionalFields>
+        <searchResultsAdditionalFields>Milestone_Name__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Start_Date__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Planned_End_Date__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Percent_Complete__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Progress__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>OWNER.LAST_NAME</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Status__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>On_Target__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Release__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+    <validationRules>
+        <fullName>Progress_Required</fullName>
+        <active>true</active>
+        <description>Progress on a milestone is mandatory</description>
+        <errorConditionFormula>ISPICKVAL( Progress__c,&apos;&apos;)</errorConditionFormula>
+        <errorMessage>Please select an appropriate status for this milestone.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Release_Actual_End_Date</fullName>
+        <active>true</active>
+        <description>Release end date should not be greater than today&apos;s date</description>
+        <errorConditionFormula>Actual_End_Date__c &gt; Today()</errorConditionFormula>
+        <errorDisplayField>Actual_End_Date__c</errorDisplayField>
+        <errorMessage>Actual End Date can&apos;t be greater than today&apos;s date.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>SetMilestone</fullName>
+        <active>false</active>
+        <errorConditionFormula>ISPICKVAL( Asset_Initiative_Milestone__c , &apos;&apos;)</errorConditionFormula>
+        <errorDisplayField>Asset_Initiative_Milestone__c</errorDisplayField>
+        <errorMessage>Select an appropriate Milestone.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>planned_end_date</fullName>
+        <active>true</active>
+        <description>planned end date should be greater than start date</description>
+        <errorConditionFormula>OR(Planned_End_Date__c  &lt;  Start_Date__c , Actual_End_Date__c  &lt;  Start_Date__c )</errorConditionFormula>
+        <errorMessage>Planned/Actual End Date must be greater than the Start Date.</errorMessage>
+    </validationRules>
+</CustomObject>

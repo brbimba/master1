@@ -1,0 +1,18 @@
+<apex:page >
+       <apex:includeScript value="/support/console/20.0/integration.js"/>
+       <script type="text/javascript">     
+            
+           function setTabTitle() {
+               sforce.console.setTabTitle('Call Script');
+           }      
+           
+           var previousOnload = window.onload;       
+           window.onload = function() {
+                if (previousOnload) {
+                    previousOnload();
+                }               
+                setTimeout('setTabTitle()', '500');
+           }
+       </script>
+        Sample Call Script
+    </apex:page>

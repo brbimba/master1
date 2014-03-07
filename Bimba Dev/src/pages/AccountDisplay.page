@@ -1,0 +1,20 @@
+<apex:page sidebar="false" standardController="Account" recordsetVar="accounts" >
+    <apex:sectionHeader title="Account Info" subtitle="List of Accounts"/>
+    <p> Hello {! $User.FirstName & ' ' & $User.LastName}. </p>
+    
+    <!-- Used without recordSetVar  
+    <p> You are currently viewing {! Account.Name} account. </p> 
+    <p> The owner of this account is {!Account.Owner.Name} </p> -->
+    <apex:pageBlock >
+    <apex:outputLink value="http://developer.force.com">Click Me!</apex:outputLink>
+    <apex:outputLink value="{! $Page.hello}">I am Me!</apex:outputLink>
+    <apex:pageBlockSection title="Account List Table">
+            <apex:pageblockTable value="{!accounts}" var="a">
+            <apex:column value="{!a.name}" />
+            <apex:column value="{!a.phone}"/>    
+            <apex:column value="{!a.Industry}"/>
+        </apex:pageblockTable>
+    </apex:pageBlockSection>
+  </apex:pageBlock>
+
+</apex:page>

@@ -1,0 +1,852 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>TOOLKIT - An object that represents an issue or risk with some parts of the project plan.</description>
+    <enableActivities>false</enableActivities>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>false</enableHistory>
+    <enableReports>true</enableReports>
+    <fields>
+        <fullName>Actual_Resolution_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Actual Resolution Date</label>
+        <required>false</required>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Category__c</fullName>
+        <description>What category is the Issue or Risk fall in</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Select one or more categories that the issue/risk is most closely associated to</inlineHelpText>
+        <label>Category</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Budget</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Resources</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Scope</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Solution</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Timeline</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>MultiselectPicklist</type>
+        <visibleLines>5</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Days_Open__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF(NOT(ISPICKVAL(Status__c, &quot;Closed&quot;)), NOW() - CreatedDate,  Actual_Resolution_Date__c - DATEVALUE(CreatedDate))</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Days Open</label>
+        <precision>18</precision>
+        <required>false</required>
+        <scale>2</scale>
+        <type>Number</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Description__c</fullName>
+        <description>Detailed description of the issue/risk.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Detailed description of the issue/risk.</inlineHelpText>
+        <label>Description</label>
+        <length>32000</length>
+        <type>LongTextArea</type>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Impact_Description__c</fullName>
+        <externalId>false</externalId>
+        <label>Impact Description</label>
+        <length>32000</length>
+        <type>LongTextArea</type>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Issue__c</fullName>
+        <externalId>false</externalId>
+        <label>Issue / Risk</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Issue</fullName>
+                <default>true</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Risk</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Likelihood__c</fullName>
+        <description>Likelihood of a Risk.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>10% - Highly unlikely to occur
+25% - Somewhat likely to occur
+50% - Strong chance to occur
+75% - Likely to occur
+90% - Most likely to occur</inlineHelpText>
+        <label>Likelihood</label>
+        <picklist>
+            <picklistValues>
+                <fullName>10%</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>25%</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>50%</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>75%</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>90%</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Likely_Impact__c</fullName>
+        <description>Likely impact of an impending risk.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Likely impact of an impending risk.</inlineHelpText>
+        <label>Likely Impact</label>
+        <required>false</required>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Logged_Date__c</fullName>
+        <defaultValue>Today()</defaultValue>
+        <externalId>false</externalId>
+        <label>Logged Date</label>
+        <required>false</required>
+        <type>Date</type>
+    </fields>
+    <fields>
+        <fullName>Milestone__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Milestone related to this Issue/Risk.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Milestone related to this Issue/Risk.</inlineHelpText>
+        <label>Milestone</label>
+        <referenceTo>Milestone__c</referenceTo>
+        <relationshipLabel>Issues/Risks</relationshipLabel>
+        <relationshipName>Issues_Risks</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Other_Description__c</fullName>
+        <externalId>false</externalId>
+        <label>Other Description</label>
+        <length>120</length>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Owner__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Owner</label>
+        <referenceTo>Contact</referenceTo>
+        <relationshipLabel>Issues/Risks</relationshipLabel>
+        <relationshipName>Issues_Risks</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Past_Due__c</fullName>
+        <externalId>false</externalId>
+        <formula>IF( ISPICKVAL(Status__c , &quot;Open&quot;) &amp;&amp;  Target_Resolution_Date__c &lt; TODAY(), &quot;Yes&quot;, &quot;&quot;)</formula>
+        <formulaTreatBlanksAs>BlankAsZero</formulaTreatBlanksAs>
+        <label>Past Due?</label>
+        <required>false</required>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <fields>
+        <fullName>Priority__c</fullName>
+        <externalId>false</externalId>
+        <label>Priority</label>
+        <picklist>
+            <picklistValues>
+                <fullName>High</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Medium</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Low</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Related_Workstream__c</fullName>
+        <externalId>false</externalId>
+        <inlineHelpText>These values will be customizable based on your project needs.</inlineHelpText>
+        <label>Related Workstream</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Account Management</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Contact Management</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Data Integration</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Data Migration</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Deployment</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Lead Management</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Opportunity Management</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Overall Project</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Project Management</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Training</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Release__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <description>Issues and Risks for this release.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Issues and Risks for this release.</inlineHelpText>
+        <label>Release</label>
+        <referenceTo>Release__c</referenceTo>
+        <relationshipLabel>Issues/Risks</relationshipLabel>
+        <relationshipName>Issues_Risks</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Request__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Request</label>
+        <referenceTo>Request__c</referenceTo>
+        <relationshipLabel>Issues/Risks</relationshipLabel>
+        <relationshipName>Issues_Risks</relationshipName>
+        <required>false</required>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Resolution_Mitigating_Actions__c</fullName>
+        <externalId>false</externalId>
+        <label>Resolution / Mitigating Actions</label>
+        <length>32000</length>
+        <type>LongTextArea</type>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Resolution__c</fullName>
+        <externalId>false</externalId>
+        <label>Resolution</label>
+        <length>32000</length>
+        <type>LongTextArea</type>
+        <visibleLines>4</visibleLines>
+    </fields>
+    <fields>
+        <fullName>Risk_Mitigation_Plan__c</fullName>
+        <description>Document the mitigation plan for this risk.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Document the mitigation plan for this risk.</inlineHelpText>
+        <label>Risk Mitigation Plan</label>
+        <required>false</required>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Risk__c</fullName>
+        <externalId>false</externalId>
+        <label>Risk / Issue Level</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Executive Steering Committee</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Leadership Team</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Project Team</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Severity_Level__c</fullName>
+        <description>Individual projects can chose specific definition of Severity levels that meet their needs.</description>
+        <externalId>false</externalId>
+        <inlineHelpText>Severity of the impact the Issue or Risk will have on the project if not resolved. Consider immediate and downstream impacts.</inlineHelpText>
+        <label>Severity Level</label>
+        <picklist>
+            <picklistValues>
+                <fullName>1 - Very Low</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>2 - Low</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>3 - Moderate</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>4 - High</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>5 - Critical</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Status</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Open</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Closed</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Target_Resolution_Date__c</fullName>
+        <externalId>false</externalId>
+        <label>Target Resolution Date</label>
+        <required>false</required>
+        <type>Date</type>
+    </fields>
+    <label>Issue/Risk</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>RECORDTYPE</columns>
+        <columns>NAME</columns>
+        <columns>Status__c</columns>
+        <columns>Priority__c</columns>
+        <columns>Description__c</columns>
+        <columns>Target_Resolution_Date__c</columns>
+        <filterScope>Everything</filterScope>
+        <filters>
+            <field>Status__c</field>
+            <operation>equals</operation>
+            <value>Open</value>
+        </filters>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <displayFormat>{0000}</displayFormat>
+        <label>Risk/Issue ID</label>
+        <type>AutoNumber</type>
+    </nameField>
+    <pluralLabel>Issues/Risks</pluralLabel>
+    <recordTypes>
+        <fullName>Issue</fullName>
+        <active>true</active>
+        <description>Create/Update any issues with the project.</description>
+        <label>Issue</label>
+        <picklistValues>
+            <picklist>Category__c</picklist>
+            <values>
+                <fullName>Budget</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Resources</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Scope</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Solution</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Timeline</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Issue__c</picklist>
+            <values>
+                <fullName>Issue</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Risk</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Likelihood__c</picklist>
+            <values>
+                <fullName>10%25</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>25%25</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>50%25</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>75%25</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>90%25</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Priority__c</picklist>
+            <values>
+                <fullName>High</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Low</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Medium</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Related_Workstream__c</picklist>
+            <values>
+                <fullName>Account Management</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Contact Management</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Data Integration</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Data Migration</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Deployment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lead Management</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Opportunity Management</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Overall Project</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Project Management</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Training</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Risk__c</picklist>
+            <values>
+                <fullName>Executive Steering Committee</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Leadership Team</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Project Team</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Severity_Level__c</picklist>
+            <values>
+                <fullName>1 - Very Low</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2 - Low</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3 - Moderate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4 - High</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5 - Critical</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status__c</picklist>
+            <values>
+                <fullName>Closed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Open</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <recordTypes>
+        <fullName>Risk</fullName>
+        <active>true</active>
+        <description>Create/Update any risks with the project.</description>
+        <label>Risk</label>
+        <picklistValues>
+            <picklist>Category__c</picklist>
+            <values>
+                <fullName>Budget</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Other</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Resources</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Scope</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Solution</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Timeline</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Issue__c</picklist>
+            <values>
+                <fullName>Issue</fullName>
+                <default>true</default>
+            </values>
+            <values>
+                <fullName>Risk</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Likelihood__c</picklist>
+            <values>
+                <fullName>10%25</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>25%25</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>50%25</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>75%25</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>90%25</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Priority__c</picklist>
+            <values>
+                <fullName>High</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Low</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Medium</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Related_Workstream__c</picklist>
+            <values>
+                <fullName>Account Management</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Contact Management</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Data Integration</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Data Migration</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Deployment</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Lead Management</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Opportunity Management</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Overall Project</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Project Management</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Training</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Risk__c</picklist>
+            <values>
+                <fullName>Executive Steering Committee</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Leadership Team</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Project Team</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Severity_Level__c</picklist>
+            <values>
+                <fullName>1 - Very Low</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>2 - Low</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>3 - Moderate</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>4 - High</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>5 - Critical</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+        <picklistValues>
+            <picklist>Status__c</picklist>
+            <values>
+                <fullName>Closed</fullName>
+                <default>false</default>
+            </values>
+            <values>
+                <fullName>Open</fullName>
+                <default>false</default>
+            </values>
+        </picklistValues>
+    </recordTypes>
+    <searchLayouts>
+        <customTabListAdditionalFields>RECORDTYPE</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Description__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Target_Resolution_Date__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>OWNER.LAST_NAME</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Status__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Priority__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Milestone__c</customTabListAdditionalFields>
+        <customTabListAdditionalFields>Release__c</customTabListAdditionalFields>
+        <lookupDialogsAdditionalFields>RECORDTYPE</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Description__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Target_Resolution_Date__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>OWNER.LAST_NAME</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Status__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Priority__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Milestone__c</lookupDialogsAdditionalFields>
+        <lookupDialogsAdditionalFields>Release__c</lookupDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>RECORDTYPE</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Description__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Target_Resolution_Date__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>OWNER.LAST_NAME</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Status__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Priority__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Milestone__c</lookupPhoneDialogsAdditionalFields>
+        <lookupPhoneDialogsAdditionalFields>Release__c</lookupPhoneDialogsAdditionalFields>
+        <searchResultsAdditionalFields>RECORDTYPE</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Description__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Target_Resolution_Date__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>OWNER.LAST_NAME</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Status__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Priority__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Milestone__c</searchResultsAdditionalFields>
+        <searchResultsAdditionalFields>Release__c</searchResultsAdditionalFields>
+    </searchLayouts>
+    <sharingModel>ReadWrite</sharingModel>
+    <validationRules>
+        <fullName>Act_Resloution_Date</fullName>
+        <active>true</active>
+        <description>Actual Resolution should not be greater than current date.</description>
+        <errorConditionFormula>Actual_Resolution_Date__c &gt;  TODAY()</errorConditionFormula>
+        <errorDisplayField>Actual_Resolution_Date__c</errorDisplayField>
+        <errorMessage>Actual resolution date should not be greater than today&apos;s date</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>IR_Res_Date_Val</fullName>
+        <active>false</active>
+        <description>Resolution Date should be greater than logged date.</description>
+        <errorConditionFormula>OR(Target_Resolution_Date__c  &lt; Logged_Date__c,  Actual_Resolution_Date__c &lt;  Logged_Date__c )</errorConditionFormula>
+        <errorMessage>Resolution Date should be greater than issue/risk logged date.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>MustDescribeOther</fullName>
+        <active>true</active>
+        <description>User must enter a description of &quot;Other&quot; if it is selected from the MS-Picklist field &apos;Category&apos;</description>
+        <errorConditionFormula>AND(INCLUDES(Category__c, &quot;Other&quot;),
+ISBLANK(Other_Description__c))</errorConditionFormula>
+        <errorDisplayField>Other_Description__c</errorDisplayField>
+        <errorMessage>You must enter a description in this field if &apos;Other&apos; is one of your selections for the category.</errorMessage>
+    </validationRules>
+</CustomObject>

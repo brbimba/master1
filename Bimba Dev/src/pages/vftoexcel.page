@@ -1,0 +1,12 @@
+<apex:page standardController="Account" contentType="application/vnd.ms-excel">
+    <apex:pageBlock title="Hello {! $User.FirstName}!">
+    YOU ARE VIEWING {! account.Name} account!
+    </apex:pageBlock>
+    <apex:pageBlock title="Contacts">
+        <apex:pageBlockTable value="{!account.contacts}" var="contact">
+        <apex:column value="{!contact.Name}"/>
+        <apex:column value="{!contact.Email}"/>
+        <apex:column value="{!contact.Phone}"/>
+    </apex:pageBlockTable>
+    </apex:pageBlock>
+</apex:page>

@@ -1,0 +1,194 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <actionOverrides>
+        <actionName>Accept</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Clone</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Delete</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Edit</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>List</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>New</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>Tab</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <actionOverrides>
+        <actionName>View</actionName>
+        <type>Default</type>
+    </actionOverrides>
+    <deploymentStatus>Deployed</deploymentStatus>
+    <description>TOOLKIT - used to capture business stakeholder sign off of various project stages.</description>
+    <enableActivities>true</enableActivities>
+    <enableFeeds>false</enableFeeds>
+    <enableHistory>true</enableHistory>
+    <enableReports>true</enableReports>
+    <fields>
+        <fullName>Agreement_Statement__c</fullName>
+        <defaultValue>&quot;I have reviewed the deliverables for the above specified stage and capability. I give official sign off and approval to move forward to the next stage.&quot;</defaultValue>
+        <externalId>false</externalId>
+        <label>Agreement Statement</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Agreement__c</fullName>
+        <externalId>false</externalId>
+        <label>Agreement</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>TextArea</type>
+    </fields>
+    <fields>
+        <fullName>Assigned_Approver__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Assigned Approver</label>
+        <referenceTo>User</referenceTo>
+        <relationshipName>Sign_Off</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Capability__c</fullName>
+        <deleteConstraint>SetNull</deleteConstraint>
+        <externalId>false</externalId>
+        <label>Capability</label>
+        <referenceTo>Capability__c</referenceTo>
+        <relationshipLabel>Sign Off</relationshipLabel>
+        <relationshipName>Sign_Off</relationshipName>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Lookup</type>
+    </fields>
+    <fields>
+        <fullName>Sign_Off_Date_Time__c</fullName>
+        <externalId>false</externalId>
+        <label>Sign Off Date/Time</label>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>DateTime</type>
+    </fields>
+    <fields>
+        <fullName>Sign_Off_Stage__c</fullName>
+        <externalId>false</externalId>
+        <label>Sign Off Stage</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Plan</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Design</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Build</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Test</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>UAT</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Deploy</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Adapt &amp; Ongoing Support</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Sign_Off_Status__c</fullName>
+        <externalId>false</externalId>
+        <label>Sign Off Status</label>
+        <picklist>
+            <picklistValues>
+                <fullName>Pending</fullName>
+                <default>false</default>
+            </picklistValues>
+            <picklistValues>
+                <fullName>Approved</fullName>
+                <default>false</default>
+            </picklistValues>
+            <sorted>false</sorted>
+        </picklist>
+        <trackHistory>false</trackHistory>
+        <type>Picklist</type>
+    </fields>
+    <fields>
+        <fullName>Stakeholder__c</fullName>
+        <externalId>false</externalId>
+        <label>Stakeholder</label>
+        <length>200</length>
+        <required>false</required>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+        <unique>false</unique>
+    </fields>
+    <label>Sign Off</label>
+    <listViews>
+        <fullName>All</fullName>
+        <columns>Capability__c</columns>
+        <columns>NAME</columns>
+        <columns>Assigned_Approver__c</columns>
+        <columns>Sign_Off_Stage__c</columns>
+        <columns>Sign_Off_Status__c</columns>
+        <columns>Sign_Off_Date_Time__c</columns>
+        <columns>Stakeholder__c</columns>
+        <filterScope>Everything</filterScope>
+        <label>All</label>
+    </listViews>
+    <nameField>
+        <label>Sign Off Name</label>
+        <trackHistory>false</trackHistory>
+        <type>Text</type>
+    </nameField>
+    <pluralLabel>Sign Off</pluralLabel>
+    <searchLayouts/>
+    <sharingModel>ReadWrite</sharingModel>
+    <validationRules>
+        <fullName>Sign_Off_Validation</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND( 
+LEN(Agreement__c)&gt;0 , Agreement__c &lt;&gt; Agreement_Statement__c 
+)</errorConditionFormula>
+        <errorDisplayField>Agreement__c</errorDisplayField>
+        <errorMessage>Please type the Agreement Statement exactly as it appears.</errorMessage>
+    </validationRules>
+    <validationRules>
+        <fullName>Validating_Actual_and_Assigned_Approver</fullName>
+        <active>true</active>
+        <errorConditionFormula>AND( 
+LEN(Agreement__c)&gt;0 , 
+Assigned_Approver__r.Id &lt;&gt; $User.Id 
+)</errorConditionFormula>
+        <errorMessage>Only the assigned approver can sign off. Please only fill out agreement if you are the capability owner and named as the assigned approver.</errorMessage>
+    </validationRules>
+</CustomObject>

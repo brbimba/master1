@@ -1,0 +1,16 @@
+<apex:page sidebar="false" showHeader="false" standardController="Account" standardStylesheets="false">
+    <!-- you can define you own style using style tag -->
+    <!-- 
+    <style>
+        body{font-family: Arial Unicode MS;}
+        h1{color:red;}
+    </style> -->
+    <!-- if you want to use an external CSS use stylesheet tag -->
+ 
+    <!--    <apex:stylesheet value="http://developer.force.com/workbooks/vfdemo.css"/>   -->
+    <!-- if you are using a stylesheet of your own,then use as below --> 
+    <apex:stylesheet value="{! URLFOR($Resource.Style, 'styles.css')}"/>
+    <h1> My styled page! </h1>
+    
+    
+</apex:page>

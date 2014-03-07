@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>PMO_TaskAssignment</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>PMO_TaskAssignment</value>
+    </caseValues>
+    <fields>
+        <label><!-- Owner/Queue --></label>
+        <name>Owner_Queue__c</name>
+    </fields>
+    <fields>
+        <label><!-- Preceding Task --></label>
+        <name>Preceding_Task__c</name>
+    </fields>
+    <fields>
+        <label><!-- Task --></label>
+        <name>Task__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

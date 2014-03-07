@@ -1,0 +1,157 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Work Assignment</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Work Assignments</value>
+    </caseValues>
+    <fields>
+        <label><!-- Assignment --></label>
+        <name>Assignment__c</name>
+        <picklistValues>
+            <masterLabel>Build</masterLabel>
+            <translation><!-- Build --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Deploy</masterLabel>
+            <translation><!-- Deploy --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Design</masterLabel>
+            <translation><!-- Design --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Estimate</masterLabel>
+            <translation><!-- Estimate --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Test</masterLabel>
+            <translation><!-- Test --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Complete Date --></label>
+        <name>Complete_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Name --></label>
+        <name>Name__c</name>
+        <relationshipLabel><!-- Work Assignments --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Project Role --></label>
+        <name>Project_Role__c</name>
+        <picklistValues>
+            <masterLabel>Business Analyst</masterLabel>
+            <translation><!-- Business Analyst --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Configuration Resource</masterLabel>
+            <translation><!-- Configuration Resource --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Data Architect</masterLabel>
+            <translation><!-- Data Architect --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Data Migration Resource</masterLabel>
+            <translation><!-- Data Migration Resource --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Development Lead</masterLabel>
+            <translation><!-- Development Lead --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Development Resource</masterLabel>
+            <translation><!-- Development Resource --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Integration Resource</masterLabel>
+            <translation><!-- Integration Resource --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Program Manager</masterLabel>
+            <translation><!-- Program Manager --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Project Manager</masterLabel>
+            <translation><!-- Project Manager --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>QA/Testing Lead</masterLabel>
+            <translation><!-- QA/Testing Lead --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>QA/Testing Resource</masterLabel>
+            <translation><!-- QA/Testing Resource --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Release Analyst</masterLabel>
+            <translation><!-- Release Analyst --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Release Manager</masterLabel>
+            <translation><!-- Release Manager --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Solution Architect</masterLabel>
+            <translation><!-- Solution Architect --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Solution Lead</masterLabel>
+            <translation><!-- Solution Lead --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Technical Architect</masterLabel>
+            <translation><!-- Technical Architect --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Technical Lead</masterLabel>
+            <translation><!-- Technical Lead --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Requirement # --></label>
+        <name>Requirement_Number__c</name>
+        <relationshipLabel><!-- Work Assignment --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>Status__c</name>
+        <picklistValues>
+            <masterLabel>Complete</masterLabel>
+            <translation><!-- Complete --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>In Progress</masterLabel>
+            <translation><!-- In Progress --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not Started</masterLabel>
+            <translation><!-- Not Started --></translation>
+        </picklistValues>
+    </fields>
+    <layouts>
+        <layout>Work Assignment Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- System Information --></label>
+            <section>System Information</section>
+        </sections>
+        <sections>
+            <label><!-- Work Assignment --></label>
+            <section>Work Assignment</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- Creation Date must be greater than Today. --></errorMessage>
+        <name>WA_Create_Date</name>
+    </validationRules>
+</CustomObjectTranslation>

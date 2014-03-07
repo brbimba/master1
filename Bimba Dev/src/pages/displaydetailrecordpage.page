@@ -1,0 +1,7 @@
+<apex:page sidebar="false" standardController="Account" >
+    <apex:detail relatedList="false" showChatter="true" />
+    <apex:relatedList list="cases"/>
+    <!-- Use output link to allow users to create a new account record through the same page  itself -->
+    <apex:outputLink value="{! URLFOR($Action.Account.New)}">Click to create a new acount!</apex:outputLink>
+  
+</apex:page>

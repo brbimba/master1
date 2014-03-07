@@ -1,0 +1,41 @@
+<apex:page standardController="Account" >
+
+    <p> You are viewing {! $User.FirstName }{! $User.LastName}'s Account {! Account.name} </p>
+    <p> Let's see what is this Ticker symbol </p>
+    <p> Account ticker symbol:{! account.TickerSymbol} </p>
+    <p> The owner of this Account is {! account.Owner.Name} </p>
+    <apex:detail relatedList="false"/>
+    <apex:relatedList list="Contacts"/>
+    <apex:pageBlock title="Account Section">
+    <apex:pageBlockSection title="Account Details">
+        <apex:outputField value="{! Account.Name}"/>
+        <apex:outputField value="{! Account.Owner.Name}"/>
+    </apex:pageBlockSection>
+    <apex:pageBlockSection title="My Account's Contacts">
+        <apex:pageblockTable value="{! Account.Contacts}" var="item">
+            <apex:column value="{! item.Name}" title="Name"/>
+            <apex:column value="{! item.Phone}"/>
+        </apex:pageblockTable>
+        <br/>
+        <br/>
+        <apex:outputText label="Name" value="This is {!Account.Name}.">
+       <!--<apex:param value="{!Account.Name"}/>-->
+        </apex:outputText>
+       <!-- <span> 
+            <apex:inputField value="{!Account.SLAExpirationDate__c}" id="accountid" name="accountid"
+            onfocus="DatePicker.pickDate(true,'accountid',true);" size="12" type="text" />
+        </span>     -->
+        <apex:outputText value="The unformatted time right now is: {!NOW()}" />
+   <br/>
+   <apex:outputText value="The formatted time right now is: 
+         {0,date,yyyy/MM/dd HH:mm:ss}">
+ <apex:param value="{!NOW()}" />
+   </apex:outputText>
+                </apex:pageBlockSection>
+   
+
+    </apex:pageBlock>
+
+
+
+</apex:page>

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <columns>
+        <field>Milestone__c.Milestone_Name__c</field>
+    </columns>
+    <columns>
+        <field>Milestone__c.Owner__c</field>
+    </columns>
+    <columns>
+        <field>Milestone__c.Start_Date__c</field>
+    </columns>
+    <columns>
+        <field>Milestone__c.Planned_End_Date__c</field>
+    </columns>
+    <columns>
+        <field>Milestone__c.Status__c</field>
+    </columns>
+    <columns>
+        <field>Milestone__c.Progress__c</field>
+    </columns>
+    <columns>
+        <field>Milestone__c.On_Target__c</field>
+    </columns>
+    <format>Summary</format>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Milestone__c.Release__c</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>Release Status by Milestone</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>CustomEntity$Milestone__c</reportType>
+    <scope>organization</scope>
+    <showDetails>true</showDetails>
+    <timeFrameFilter>
+        <dateColumn>Milestone__c.Actual_End_Date__c</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>

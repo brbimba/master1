@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>IDC Task</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>IDC Tasks</value>
+    </caseValues>
+    <fields>
+        <label><!-- Actual LOE --></label>
+        <name>Actual_LOE__c</name>
+    </fields>
+    <fields>
+        <label><!-- Assigned Date --></label>
+        <name>Assigned_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Build Task Type --></label>
+        <name>Build_Task_Type__c</name>
+        <picklistValues>
+            <masterLabel>Configuration</masterLabel>
+            <translation><!-- Configuration --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Customization</masterLabel>
+            <translation><!-- Customization --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- CWB Updated? --></label>
+        <name>CWB_Updated__c</name>
+    </fields>
+    <fields>
+        <label><!-- Comments --></label>
+        <name>Comments__c</name>
+    </fields>
+    <fields>
+        <label><!-- Components Updated in CWB --></label>
+        <name>Components_Updated_in_CWB__c</name>
+    </fields>
+    <fields>
+        <label><!-- Defect Description --></label>
+        <name>Defect_Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Defect Found --></label>
+        <name>Defect_Found__c</name>
+    </fields>
+    <fields>
+        <label><!-- Defect --></label>
+        <name>Defect__c</name>
+        <relationshipLabel><!-- IDC Tasks --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- End Date --></label>
+        <name>End_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- IDC Task --></label>
+        <name>IDC_Task__c</name>
+        <relationshipLabel><!-- IDC Tasks --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- PM Efforts --></label>
+        <name>PM_Efforts__c</name>
+        <picklistValues>
+            <masterLabel>CAR Activities</masterLabel>
+            <translation><!-- CAR Activities --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DAR Activities</masterLabel>
+            <translation><!-- DAR Activities --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>DART Activities</masterLabel>
+            <translation><!-- DART Activities --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>EBS Reporting</masterLabel>
+            <translation><!-- EBS Reporting --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Project Closing</masterLabel>
+            <translation><!-- Project Closing --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Project Initiation</masterLabel>
+            <translation><!-- Project Initiation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Project Planning</masterLabel>
+            <translation><!-- Project Planning --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Review Defect Logs</masterLabel>
+            <translation><!-- Review Defect Logs --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Review Issue Logs</masterLabel>
+            <translation><!-- Review Issue Logs --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Review Risk Logs</masterLabel>
+            <translation><!-- Review Risk Logs --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Update Issue Logs</masterLabel>
+            <translation><!-- Update Issue Logs --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Update Project Plan</masterLabel>
+            <translation><!-- Update Project Plan --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Update Risk Logs</masterLabel>
+            <translation><!-- Update Risk Logs --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Planned LOE --></label>
+        <name>Planned_LOE__c</name>
+    </fields>
+    <fields>
+        <label><!-- Priority --></label>
+        <name>Priority__c</name>
+        <picklistValues>
+            <masterLabel>High</masterLabel>
+            <translation><!-- High --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Low</masterLabel>
+            <translation><!-- Low --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Medium</masterLabel>
+            <translation><!-- Medium --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Request Name --></label>
+        <name>Request_Name__c</name>
+    </fields>
+    <fields>
+        <label><!-- Request --></label>
+        <name>Request__c</name>
+        <relationshipLabel><!-- IDC Tasks --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Start Date --></label>
+        <name>Start_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>Status__c</name>
+        <picklistValues>
+            <masterLabel>Completed</masterLabel>
+            <translation><!-- Completed --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>In Progress</masterLabel>
+            <translation><!-- In Progress --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not Started</masterLabel>
+            <translation><!-- Not Started --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Re-assigned</masterLabel>
+            <translation><!-- Re-assigned --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Task Description --></label>
+        <name>Task_Description__c</name>
+    </fields>
+    <fields>
+        <label><!-- Task Type --></label>
+        <name>Task_Type__c</name>
+        <picklistValues>
+            <masterLabel>Analysis</masterLabel>
+            <translation><!-- Analysis --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Build</masterLabel>
+            <translation><!-- Build --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Build Review</masterLabel>
+            <translation><!-- Build Review --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Code Review</masterLabel>
+            <translation><!-- Code Review --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Defect Fix - Build</masterLabel>
+            <translation><!-- Defect Fix - Build --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Defect Fix - Code</masterLabel>
+            <translation><!-- Defect Fix - Code --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Defect Fix - Test Script</masterLabel>
+            <translation><!-- Defect Fix - Test Script --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Design</masterLabel>
+            <translation><!-- Design --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>PM Efforts</masterLabel>
+            <translation><!-- PM Efforts --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Test Script Execution</masterLabel>
+            <translation><!-- Test Script Execution --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Test Script Preparation</masterLabel>
+            <translation><!-- Test Script Preparation --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Test Script Review</masterLabel>
+            <translation><!-- Test Script Review --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Track --></label>
+        <name>Track__c</name>
+        <picklistValues>
+            <masterLabel>Track 1</masterLabel>
+            <translation><!-- Track 1 --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Track 2</masterLabel>
+            <translation><!-- Track 2 --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Unit Test Script Attached? --></label>
+        <name>Unit_Test_Script_Attached__c</name>
+    </fields>
+    <layouts>
+        <layout>IDC Task Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Review --></label>
+            <section>Review</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- Please enter Comments, Start Date, End Date, Actual LOE and Planned LOE. --></errorMessage>
+        <name>Attributes_Covered</name>
+    </validationRules>
+    <validationRules>
+        <errorMessage><!-- Please enter components updated in CWB. --></errorMessage>
+        <name>CWB_Updated_Validation</name>
+    </validationRules>
+</CustomObjectTranslation>

@@ -1,0 +1,18 @@
+<apex:page sidebar="false" showheader="false" standardController="Account" >  
+<apex:form >
+        <apex:pageBlock >
+
+           <apex:pageMessages ></apex:pageMessages> 
+            <apex:pageblockSection title="Create an Account" >
+                <apex:inputField value="{! Account.Name}"/>
+                <apex:inputField value="{! Account.Industry}"/>
+                <apex:commandButton action="{! Save}" value="Save!"/>
+
+            </apex:pageblockSection>    
+            <apex:pageblockSection title="Search for an account"> 
+                <apex:inputField value="{!account.name}" />
+                <!-- <apex:commandbutton value="{!Search}" action="{!Search}"/> -->
+            </apex:pageblockSection> 
+        </apex:pageBlock>
+    </apex:form>
+</apex:page>

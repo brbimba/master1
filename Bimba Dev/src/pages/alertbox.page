@@ -1,0 +1,43 @@
+<apex:page >
+<style type="text/css">
+div#fake_box{
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    height: 120px;
+    width: 250px;
+    display: none;    
+    text-align:center;
+    background-color:#C0C0C0;
+    border:1px double; 
+    color:black;  
+    font-size:15px;
+    font-weight:bold;
+}
+</style>
+<apex:form >
+<apex:commandButton value="Dosomeaction" onclick="return show_box();" />
+
+<apex:actionFunction action="{! Dosomeaction }" name=" Dosomeaction "></apex:actionFunction>
+<script>
+function show_box()
+        {
+           var conf= document.getElementById("fake_box").style.display = 'block';           
+           return false;                             
+        }      
+          
+          function closebox()
+          {               
+           document.getElementById("fake_box").style.display = 'none';
+          }
+</script>
+
+<div id="fake_box">
+   <!-- <br/> Are you sure you want to send this CRD to AI?<br/><br/><br/> -->
+   <br/>Does the customer want to be sent an sms booking confirmation?
+ <br/><br/><br/>
+    <input type="button" style="float:center;" value="Yes" onclick=" Dosomeaction ();closebox ()"></input>
+    <input type="button" style="float:center;" value="No" onclick="closebox()"></input>
+</div>
+</apex:form>
+</apex:page>
